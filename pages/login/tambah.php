@@ -1,23 +1,10 @@
-<?php
-
-include('../../connect.php');
-$id = $_GET['id'];
-$sql = "SELECT * FROM rekap WHERE id = $id";
-$query = mysqli_query($connect, $sql);
-
-// var_dump($sql);
-// var_dump($connect);
-// var_dump($query);
-// die()
- ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Form Edit Data Perjadin Lapan Parepare</title>
+    <title>Form Tambah User Lapan Parepare</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -85,7 +72,7 @@ $query = mysqli_query($connect, $sql);
         <div class="container-fluid">
             <div class="block-header">
                 <h2>
-                    FORM EDIT DATA PERJALANAN DINAS LAPAN PAREPARE
+                    FORM TAMBAH USER LAPAN PAREPARE
                     <!--Keterangan dinonaktifkan untuk sementara
                     <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
                   -->
@@ -96,82 +83,33 @@ $query = mysqli_query($connect, $sql);
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                     <div class="card">
                         <div class="header">
-                            <h2>FORM EDIT</h2>
+                            <h2>FORM TAMBAH</h2>
                         </div>
                         <div class="body">
 
-                          <?php
-                          while ($row = mysqli_fetch_array($query)) {
-
-                            ?>
-
-                            <form id="form_input" method="POST" action="update.php" >
-                                <div class="form-group form-float">
+                            <form id="form_input" method="POST" action="tambah_user.php" >
+                              <div class="form-group form-float">
                                   <div class="form-line">
-                                        <input type="text" class="form-control" name="id" required value="<?php echo $_GET['id']; ?>"  >
-                                      <label class="form-label">ID</label>
+                                      <input type="text" class="form-control" name="username" required>
+                                      <label class="form-label">Username </label>
                                   </div>
                               </div>
                               <div class="form-group form-float">
                                   <div class="form-line">
-                                      <input type="text" class="form-control" name="no_srt" required value="<?php echo $row['no_srt_tgs']; ?>"  >
-                                      <label class="form-label">No.Surat Tugas </label>
+                                      <input type="password" class="form-control" name="password" required>
+                                      <label class="form-label">Password </label>
                                   </div>
-                              </div>
-                              <div class="form-group form-float">
-                                  <div class="form-line">
-                                      <input type="text" class="form-control" name="tgl_srt" required value="<?php echo $row['tgl_srt_tgs']; ?>" >
-                                      <label class="form-label">Tanggal Surat Tugas </label>
-                                  </div>
-                                  <div class="help-info">YYYY-MM-DD format</div>
+                                  <div class="help-info">Masukkan Password Baru Anda</div>
                               </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="nama" required value="<?php echo $row['nama']; ?>">
-                                        <label class="form-label">Nama</label>
+                                        <input type="text" class="form-control" name="nama_user" required>
+                                        <label class="form-label">Nama User</label>
                                     </div>
                                 </div>
 
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <textarea name="description" cols="30" rows="5" class="form-control no-resize" required value="<?php echo $row['kgtn_perjadin']; ?>" >  </textarea>
-                                        <label class="form-label">Kegiatan Perjadin</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="tgl_brngkt" required  value="<?php echo $row['tgl_berangkat']; ?>">
-                                        <label class="form-label">Tanggal Berangkat</label>
-                                    </div>
-                                    <div class="help-info">YYYY-MM-DD format</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="tgl_plng" required value="<?php echo $row['tgl_pulang']; ?>">
-                                        <label class="form-label">Tanggal Pulang</label>
-                                    </div>
-                                    <div class="help-info">YYYY-MM-DD format</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="no_spd" required value="<?php echo $row['no_spd']; ?>">
-                                        <label class="form-label">Nomor SPD</label>
-                                    </div>
-                                    <div class="help-info">Ex:SPD/001/SBPJP/I/2018</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="tgl_spd" required value="<?php echo $row['tgl_spd']; ?>">
-                                        <label class="form-label">Tanggal SPD</label>
-                                    </div>
-                                    <div class="help-info">YYYY-MM-DD format</div>
-                                </div>
-                                <?php
-                              }
-                               ?>
-                                    <button class="btn btn-primary waves-effect" type="submit" name="edit" onclick="update.php">SIMPAN</button>
+                                    <button class="btn btn-primary waves-effect" type="submit" name="submit" onclick="tambah_user.php">SIMPAN</button>
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -180,8 +118,8 @@ $query = mysqli_query($connect, $sql);
 
             <!--Button Kembali ke Tabel-->
             <div class="col-xs-9 col-sm-9 col-md-9 col-md-9" style="padding-left: 0px;  padding-right: 30px;  padding-bottom: 30px;">
-                <a href="../../pages/tables/normal-tables.php">
-                  <button type="button" class="btn bg-teal btn-block btn-lg waves-effect">LIHAT DATA</button>
+                <a href="../../pages/login/data_user.php">
+                  <button type="button" class="btn bg-teal btn-block btn-lg waves-effect">LIHAT DATA USER</button>
                 </a>
             </div>
             <!--#END Button Kembali ke Tabel-->
@@ -215,4 +153,10 @@ $query = mysqli_query($connect, $sql);
 
     <!-- Custom Js -->
     <script src="../../js/admin.js"></script>
-    <script src="../../js/pages/forms/form-vali
+    <script src="../../js/pages/forms/form-validation.js"></script>
+
+    <!-- Demo Js -->
+    <script src="../../js/demo.js"></script>
+</body>
+
+</html>

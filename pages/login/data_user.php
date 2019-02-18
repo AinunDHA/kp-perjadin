@@ -1,6 +1,6 @@
 <?php
 include('../../connect.php');
-$sql = 'SELECT * FROM rekap';
+$sql = 'SELECT * FROM user';
 $query = mysqli_query($connect, $sql);
 
  ?>
@@ -65,7 +65,8 @@ $query = mysqli_query($connect, $sql);
           </div>
             <div class="navbar-header">
                 <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
-            </div><div class="navbar-header" style="float: right;">
+            </div>
+            <div class="navbar-header" style="float: right;">
               <a class="btn bg-teal waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                  aria-controls="collapseExample">
                   DATA PERJADIN
@@ -83,9 +84,9 @@ $query = mysqli_query($connect, $sql);
                     <div class="btn-group user-helper-dropdown" style="padding-top: -; margin-top: 20px;">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="..normal-tables.php"><i class="material-icons">info</i>Data Perjadin</a></li>
-                            <li><a href="../login/data_user.php"><i class="material-icons">label</i>Data User</a></li>
-                            <li><a href="../login/sign_in.php"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="../tables/normal-tables.php"><i class="material-icons">info</i>Data Perjadin</a></li>
+                            <li><a href="data_user.php"><i class="material-icons">label</i>Data User</a></li>
+                            <li><a href="sign_in.php"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -98,35 +99,9 @@ $query = mysqli_query($connect, $sql);
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2 style="text-align: center; width: 750px;">DATA REKAP PERJALANAN DINAS LAPAN PAREPARE </h2>
+                <h2 style="text-align: center; width: 750px;">DATA USER </h2>
             </div>
-            <!--Untuk save as PDF -->
-            <br>
-            <div id="savepdf" class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="float: right;">
-              <a href="javascript:void(0);">
-                  <button id="pdf" type="button" class="btn bg-cyan btn-block btn-lg waves-effect">Save as PDF</button>
-              </a>
-            </div>
-              <br>
-              <br>
-              <br>
-              <script type="text/javascript">
-                  var doc = new jsPDF();
-                  var specialElementHandlers{
-                    '#savepdf': function(element, renderer) {       //id div yg di dlmnya ada button save ass pdf
-                      return true;
-                    }
-                  };
-                  $('#pdf').click(function()        //id button yg memiliki fungsi save as pdf
-                {
-                  doc.frompPhp($('#tabel').php(), 15, 15, { // area yang akan diconvert as pdf adalah yg memiliki id="tabel"
-                    'width' : 170,
-                      'elementHandlers': specialElementHandlers;
-                  });
-                  doc.save('rekap-perjadin.pdf');
-                });
-              </script>
-                <!--#END#Untuk save as PDF -->
+
             <!-- Bordered Table -->
 
             <div id="tabel" class="row clearfix" style=" width: 1270px; height: 400px; padding: 3px; margin-left: -290px;" >
@@ -134,22 +109,17 @@ $query = mysqli_query($connect, $sql);
                     <div class="card">
                         <div class="header">
                             <h2>
-                                REKAP PERJADIN LAPAN PAREPARE (TRIAL)
+                                DATA LOGIN USER
                             </h2>
                         </div>
                         <div class="body table-responsive">
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th style="text-align: center;">No</th>
-                                        <th style="text-align: center;">NOMOR SURAT TUGAS</th>
-                                        <th style="text-align: center;">TANGGAL SURAT TUGAS</th>
+                                        <th style="text-align: center;">ID</th>
+                                        <th style="text-align: center;">USERNAME</th>
+                                        <th style="text-align: center;">PASSWORD</th>
                                         <th style="text-align: center;">NAMA</th>
-                                        <th style="text-align: center;">KEGIATAN PERJADIN</th>
-                                        <th style="text-align: center;">TANGGAL BERANGKAT</th>
-                                        <th style="text-align: center;">TANGGAL PULANG</th>
-                                        <th style="text-align: center;">NOMOR SPD</th>
-                                        <th style="text-align: center;">TANGGAL SPD</th>
                                         <th style="text-align: center;">AKSI</th>
                                     </tr>
                                 </thead>
@@ -160,29 +130,20 @@ $query = mysqli_query($connect, $sql);
                                     while ($row = mysqli_fetch_array($query)) {
 
                                       $id       = $row['id'];
-                                      $no_srt   = $row['no_srt_tgs'];
-                                      $tgl_srt  = $row['tgl_srt_tgs'];
+                                      $no_srt   = $row['username'];
+                                      $tgl_srt  = $row['password'];
                                       $nama     = $row['nama'];
-                                      $kegiatan = $row['kgtn_perjadin'];
-                                      $tgl_brkt = $row['tgl_berangkat'];
-                                      $tgl_plng = $row['tgl_pulang'];
-                                      $no_spd   = $row['no_spd'];
-                                      $tang_spd  = $row['tgl_spd'];
                                         ?>
                                     <tr>
                                         <td> <?php echo $no; ?></td>
                                         <th scope="row"><?php echo $no_srt; ?>
                                         <td><?php echo  $tgl_srt; ?></td>
                                         <td><?php echo $nama; ?></td>
-                                        <td><?php echo $kegiatan; ?></td>
-                                        <td><?php echo $tgl_brkt; ?></td>
-                                        <td><?php echo $tgl_plng; ?></td>
-                                        <td><?php echo $no_spd; ?></td>
-                                        <td><?php echo $tang_spd; ?></td>
+
                                         <td>
                                         </div>
                                         <div class="edit">
-                                          <a href="../forms/edit.php?id=<?php echo $id;?>">
+                                          <a href="edit_user.php?id=<?php echo $id;?>">
                                             <img src="../../images/edit.jpg" alt="" width="15" height="15">
                                           </a>
                                         </div>
@@ -208,8 +169,8 @@ $query = mysqli_query($connect, $sql);
 
                                 <!--Button Kembali ke Tabel-->
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="padding-bottom: 30px;">
-                                    <a href="../../pages/forms/form-validation.php">
-                                      <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect">BACK</button>
+                                    <a href="../../pages/login/tambah.php">
+                                      <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect">TAMBAH USER</button>
                                     </a>
                                 </div>
                                 <!--#END Button Kembali ke Tabel-->
