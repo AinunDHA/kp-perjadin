@@ -4,6 +4,10 @@ include('../../connect.php');
 $id = $_GET['id'];
 $sql = "SELECT * FROM user WHERE id = $id";
 $query = mysqli_query($connect, $sql);
+// var_dump($sql);
+// var_dump($connect);
+// var_dump($query);
+// die()
  ?>
 
 <!DOCTYPE html>

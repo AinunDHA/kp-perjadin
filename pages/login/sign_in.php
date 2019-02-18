@@ -44,7 +44,7 @@
                 $password	= $_POST['password'];
 
 
-                $query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username' AND password='$password'");
+                $query = mysqli_query($connect, "SELECT * FROM user WHERE username='$username' AND password='$password'");
                 if(mysqli_num_rows($query) == 0){
                   echo '<div class="alert alert-danger">Oooppss...!!! Login gagal.</div>';
                 }else{
