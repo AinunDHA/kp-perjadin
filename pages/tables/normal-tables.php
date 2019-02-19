@@ -110,27 +110,37 @@ $query = mysqli_query($connect, $sql);
             <br>
             <div id="savepdf" class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="float: right;">
               <a href="javascript:void(0);">
-                  <button id="pdf" type="button" class="btn bg-cyan btn-block btn-lg waves-effect">Save as PDF</button>
+                  <button id="cmd" type="button" class="btn bg-cyan btn-block btn-lg waves-effect">Save as PDF</button>
               </a>
             </div>
               <br>
               <br>
-              <br>
-              <script type="text/javascript">
-                  var doc = new jsPDF();
-                  var specialElementHandlers{
-                    '#savepdf': function(element, renderer) {       //id div yg di dlmnya ada button save ass pdf
-                      return true;
-                    }
-                  };
-                  $('#pdf').click(function()        //id button yg memiliki fungsi save as pdf
-                {
-                  doc.frompPhp($('#tabel').php(), 15, 15, { // area yang akan diconvert as pdf adalah yg memiliki id="tabel"
-                    'width' : 170,
-                      'elementHandlers': specialElementHandlers;
-                  });
-                  doc.save('rekap-perjadin.pdf');
+
+              <div id="editor">
+
+              </div>
+
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+              </script>
+              <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js">
+              </script>
+              <script type="text/javascript"> //js script untuk generate pdf mulai dari sini
+              var doc = new jsPDF();
+              var specialElementHandlers={
+                '#editor':function(element,renderer){
+                  return true;
+                }
+              };
+              $('#cmd').click(function(){
+                doc.fromHTML($
+                ('#content').html(), 15, 15,{
+                  'width':170,
+                  'elementHandlers':
+                  specialElementHandlers
                 });
+                doc.save('rekap-perjadin.pdf');
+              });
+
               </script>
                 <!--#END#Untuk save as PDF -->
             <!-- Bordered Table -->
@@ -138,11 +148,15 @@ $query = mysqli_query($connect, $sql);
             <div id="tabel" class="row clearfix" style=" width: 1270px; height: 400px; padding: 3px; margin-left: -290px;" >
                 <div class="col-lg-30 col-md-30 col-sm-30 col-xs-30">
                     <div class="card">
+                      <div id="content">
+
+
                         <div class="header">
                             <h2>
-                                REKAP PERJADIN LAPAN PAREPARE 
+                                REKAP PERJADIN LAPAN PAREPARE
                             </h2>
                         </div>
+                      </div>
                         <div class="body table-responsive">
                             <table class="table table-bordered">
                                 <thead>
