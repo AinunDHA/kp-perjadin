@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(empty($_SESSION)){
+	header("Location: ../../sign_in.php");
+}
+?>
+<?php
 include('../../connect.php');
 $sql = 'SELECT * FROM rekap';
 $query = mysqli_query($connect, $sql);
@@ -66,13 +72,13 @@ $query = mysqli_query($connect, $sql);
             <div class="navbar-header">
                 <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
             </div><div class="navbar-header" style="float: right;">
-              <a class="btn bg-teal waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+              <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                  aria-controls="collapseExample">
                   DATA PERJADIN
               </a>
             </div>
             <div class="navbar-header" style="float: right;">
-              <a class="btn bg-teal waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+              <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                  aria-controls="collapseExample">
                   DATA USER
               </a>
@@ -85,7 +91,7 @@ $query = mysqli_query($connect, $sql);
                         <ul class="dropdown-menu pull-right">
                             <li><a href="..normal-tables.php"><i class="material-icons">info</i>Data Perjadin</a></li>
                             <li><a href="../login/data_user.php"><i class="material-icons">label</i>Data User</a></li>
-                            <li><a href="../login/sign_in.php"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="../../logout.php" onclick="return confirm('Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -134,7 +140,7 @@ $query = mysqli_query($connect, $sql);
                     <div class="card">
                         <div class="header">
                             <h2>
-                                REKAP PERJADIN LAPAN PAREPARE (TRIAL)
+                                REKAP PERJADIN LAPAN PAREPARE 
                             </h2>
                         </div>
                         <div class="body table-responsive">

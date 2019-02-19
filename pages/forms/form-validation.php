@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(empty($_SESSION)){
+	header("Location: ../../sign_in.php");
+}
+?>
 ﻿<!DOCTYPE html>
 <html>
 

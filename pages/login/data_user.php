@@ -1,4 +1,11 @@
 <?php
+session_start();
+if(empty($_SESSION)){
+	header("Location: ../../sign_in.php");
+}
+?>
+
+<?php
 include('../../connect.php');
 $sql = 'SELECT * FROM user';
 $query = mysqli_query($connect, $sql);
@@ -67,13 +74,13 @@ $query = mysqli_query($connect, $sql);
                 <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
             </div>
             <div class="navbar-header" style="float: right;">
-              <a class="btn bg-teal waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+              <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                  aria-controls="collapseExample">
                   DATA PERJADIN
               </a>
             </div>
             <div class="navbar-header" style="float: right;">
-              <a class="btn bg-teal waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
+              <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                  aria-controls="collapseExample">
                   DATA USER
               </a>

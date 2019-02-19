@@ -3,7 +3,7 @@
 session_start();
 
 //menghubungkan dengan connect.php
-include('../../connect.php');
+include('connect.php');
 //tangkap data dari form Login
 $username   = $_POST['username'];
 $password   = $_POST['password'];
@@ -19,7 +19,7 @@ $cek    = mysqli_num_rows($data);
 if ($cek>0) {
   $_SESSION['username'] = $username;
   $_SESSION['status']   = "login";
-  header("location:../tables/normal-tables.php");
+  header("location:pages/tables/normal-tables.php");
 }
 else {
   header("location:sign_in.php?pesan=gagal");
