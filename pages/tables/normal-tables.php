@@ -209,7 +209,7 @@ $query = mysqli_query($connect, $sql);
                                 <!--Button Kembali ke Tabel-->
                                 <div class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="padding-bottom: 30px;">
                                     <a href="../../pages/forms/form-validation.php">
-                                      <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect">BACK</button>
+                                      <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect">TAMBAH DATA</button>
                                     </a>
                                 </div>
                                 <!--#END Button Kembali ke Tabel-->

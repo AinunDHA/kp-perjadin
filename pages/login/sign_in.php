@@ -39,25 +39,7 @@ session_start();
         </div>
         <div class="card">
             <div class="body">
-              <?php
-              if(isset($_POST['body'])){
-                include("connect.php");
-
-                $username	= $_POST['username'];
-                $password	= $_POST['password'];
-
-
-                $query = mysqli_query($connect, "SELECT * FROM user WHERE username='$username' AND password='$password'");
-                if(mysqli_num_rows($query) == 0){
-                  echo '<div class="alert alert-danger">Oooppss...!!! Login gagal.</div>';
-                }else{
-                    echo '<div class="alert alert-danger">Login berhasil.</div>';
-                    header("Location: data_user.php");
-
-                }
-              }
-              ?>
-                <form id="sign_in" method="POST">
+                <form id="sign_in" method="POST" action="login.php">
                     <div class="msg">Sign in to start your session</div>
                     <div class="input-group">
                         <span class="input-group-addon">
