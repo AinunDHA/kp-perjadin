@@ -1,15 +1,15 @@
 <!--Kode PHP Mulai dari sini-->
 <?php
       include('../../connect.php');
-      $id             =$_POST['id'];
+      $id             = $_POST['id'];
       $username       = $_POST['username'];
       $password       = $_POST['password'];
-      $nama            = $_POST['nama'];
+      $nama           = $_POST['nama'];
 
-      //update data ke tabel formaat nama column_db=value
-      $update = "UPDATE user SET username='$username', password='$password', nama='$nama_user' WHERE id='$id'";
+      //update data ke tabel
+      $update = "UPDATE user SET username='$username', password='$password', nama='$nama' WHERE id=$id ";
       var_dump($update);
-      // var_dump($_POST['username']);
+      // var_dump($_POST['no_srt']);
       // die();
       $query_update = mysqli_query($connect,$update);
       var_dump($query_update);
@@ -17,7 +17,7 @@
         //jika berhasil
         ?>
             <script language="JavaScript">
-              alert('Update data berhasil');
+              alert('Update user berhasil');
               document.location='data_user.php';
             </script>
 
@@ -27,8 +27,8 @@
         //JIka Gagal
         ?>
             <script language="JavaScript">
-            alert('Update data gagal');
-              // document.location='../tables/normal-tables.php';
+            alert('Update user gagal');
+              // document.location='data_user.php';
             </script>
 
         <?php

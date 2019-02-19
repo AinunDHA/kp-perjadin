@@ -4,6 +4,7 @@ include('../../connect.php');
 $id = $_GET['id'];
 $sql = "SELECT * FROM user WHERE id = $id";
 $query = mysqli_query($connect, $sql);
+
 // var_dump($sql);
 // var_dump($connect);
 // var_dump($query);
@@ -84,7 +85,7 @@ $query = mysqli_query($connect, $sql);
         <div class="container-fluid">
             <div class="block-header">
                 <h2>
-                    FORM EDIT DATA USER LAPAN PAREPARE
+                    FORM EDIT DATA PERJALANAN DINAS LAPAN PAREPARE
                     <!--Keterangan dinonaktifkan untuk sementara
                     <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
                   -->
@@ -105,9 +106,9 @@ $query = mysqli_query($connect, $sql);
                             ?>
 
                             <form id="form_input" method="POST" action="update_user.php" >
-                              <div class="form-group form-float">
+                                <div class="form-group form-float">
                                   <div class="form-line">
-                                      <input type="text" class="form-control" name="id_user" required value="<?php echo $_GET['id']; ?>"  >
+                                        <input type="text" class="form-control" name="id" required value="<?php echo $_GET['id']; ?>"  >
                                       <label class="form-label">ID</label>
                                   </div>
                               </div>
@@ -120,14 +121,13 @@ $query = mysqli_query($connect, $sql);
                               <div class="form-group form-float">
                                   <div class="form-line">
                                       <input type="password" class="form-control" name="password" required value="<?php echo $row['password']; ?>" >
-
                                       <label class="form-label">Password </label>
                                   </div>
-                                  <div class="help-info">Masukkan Password</div>
+                                  <div class="help-info">Masukkan Password Anda</div>
                               </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="nama_user" required value="<?php echo $row['nama']; ?>">
+                                        <input type="text" class="form-control" name="nama" required value="<?php echo $row['nama']; ?>">
                                         <label class="form-label">Nama</label>
                                     </div>
                                 </div>
@@ -180,10 +180,4 @@ $query = mysqli_query($connect, $sql);
 
     <!-- Custom Js -->
     <script src="../../js/admin.js"></script>
-    <script src="../../js/pages/forms/form-validation.js"></script>
-
-    <!-- Demo Js -->
-    <script src="../../js/demo.js"></script>
-</body>
-
-</html>
+    <script src="../../js/pages/forms/form-vali
