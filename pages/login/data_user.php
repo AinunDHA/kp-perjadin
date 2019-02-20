@@ -18,7 +18,7 @@ $query = mysqli_query($connect, $sql);
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Rekap Perjadin Lapan Parepare </title>
+    <title>Data User | PERJADIN LAPAN PAREPARE </title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -93,7 +93,7 @@ $query = mysqli_query($connect, $sql);
                         <ul class="dropdown-menu pull-right">
                             <li><a href="../tables/normal-tables.php"><i class="material-icons">info</i>Data Perjadin</a></li>
                             <li><a href="data_user.php"><i class="material-icons">label</i>Data User</a></li>
-                            <li><a href="sign_in.php"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="../../logout.php"onclick="return confirm('Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>

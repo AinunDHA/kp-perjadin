@@ -3,6 +3,7 @@ session_start();
 if(empty($_SESSION)){
 	header("Location: ../../sign_in.php");
 }
+
 ?>
 <?php
 include('../../connect.php');
@@ -17,7 +18,7 @@ $query = mysqli_query($connect, $sql);
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Rekap Perjadin Lapan Parepare </title>
+    <title>Rekap Perjalanan Dinas | PERJADIN LAPAN PAREPARE </title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -125,7 +126,7 @@ $query = mysqli_query($connect, $sql);
               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js">
               </script>
               <script type="text/javascript"> //js script untuk generate pdf mulai dari sini
-              var doc = new jsPDF();
+              var doc = new jsPDF('l', 'pt', 'legal'); //l = landscape p= portrait
               var specialElementHandlers={
                 '#editor':function(element,renderer){
                   return true;
@@ -138,7 +139,7 @@ $query = mysqli_query($connect, $sql);
                   'elementHandlers':
                   specialElementHandlers
                 });
-                doc.save('rekap-perjadin.pdf');
+                doc.save('test-perjadin.pdf');
               });
 
               </script>
