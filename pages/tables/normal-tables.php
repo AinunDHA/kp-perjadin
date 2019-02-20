@@ -133,7 +133,7 @@ $query = mysqli_query($connect, $sql);
               };
               $('#cmd').click(function(){
                 doc.fromHTML($
-                ('#content').html(), 15, 15,{
+                ('#content').html(), 15, 15, {
                   'width':170,
                   'elementHandlers':
                   specialElementHandlers
@@ -149,8 +149,6 @@ $query = mysqli_query($connect, $sql);
                 <div class="col-lg-30 col-md-30 col-sm-30 col-xs-30">
                     <div class="card">
                       <div id="content">
-
-
                         <div class="header">
                             <h2>
                                 REKAP PERJADIN LAPAN PAREPARE
@@ -172,7 +170,7 @@ $query = mysqli_query($connect, $sql);
                                         <th style="text-align: center;">TANGGAL SPD</th>
                                         <th style="text-align: center;">AKSI</th>
                                     </tr>
-                                </thead>
+                                </thead>    
                                   <!--Kode PHP untuk menampilkan Database -->
                                 <tbody>
                                   <?php
