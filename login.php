@@ -22,6 +22,22 @@ if ($cek>0) {
   header("location:pages/tables/normal-tables.php");
 }
 else {
-  header("location:sign_in.php?pesan=gagal");
+  ?>
+      <script language="JavaScript">
+      alert('Login gagal ...coba lagi deh');
+        document.location='sign_in.php';
+      </script>
+
+  <?php
 }
  ?>
+<!--script php yg lama
+if ($cek>0) {
+  $_SESSION['username'] = $username;
+  $_SESSION['status']   = "login";
+  header("location:pages/tables/normal-tables.php");
+}
+else {
+  header("location:sign_in.php?pesan=gagal");
+}
+-->

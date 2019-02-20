@@ -115,11 +115,11 @@ $query = mysqli_query($connect, $sql);
             </div>
               <br>
               <br>
+              <br>
 
-              <div id="editor">
+              <div class="editor">
 
               </div>
-
               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
               </script>
               <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js">
@@ -170,7 +170,7 @@ $query = mysqli_query($connect, $sql);
                                         <th style="text-align: center;">TANGGAL SPD</th>
                                         <th style="text-align: center;">AKSI</th>
                                     </tr>
-                                </thead>    
+                                </thead>
                                   <!--Kode PHP untuk menampilkan Database -->
                                 <tbody>
                                   <?php

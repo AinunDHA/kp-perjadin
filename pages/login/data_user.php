@@ -127,7 +127,7 @@ $query = mysqli_query($connect, $sql);
                                         <th style="text-align: center;">USERNAME</th>
                                         <th style="text-align: center;">PASSWORD</th>
                                         <th style="text-align: center;">NAMA</th>
-                                        <th style="text-align: center;">AKSI</th>
+                                        <th style="text-align: center; width: 40px;">AKSI</th>
                                     </tr>
                                 </thead>
                                   <!--Kode PHP untuk menampilkan Database -->
@@ -142,7 +142,7 @@ $query = mysqli_query($connect, $sql);
                                       $nama     = $row['nama'];
                                         ?>
                                     <tr>
-                                        <td> <?php echo $no; ?></td>
+                                        <td style="text-align: center;"> <?php echo $no; ?></td>
                                         <th scope="row"><?php echo $no_srt; ?>
                                         <td><?php echo  $tgl_srt; ?></td>
                                         <td><?php echo $nama; ?></td>
