@@ -19,7 +19,7 @@ $cek    = mysqli_num_rows($data);
 if ($cek>0) {
   $_SESSION['username'] = $username;
   $_SESSION['status']   = "login";
-  header("location:pages/tables/normal-tables.php");
+  header("location:pages/tables/jquery-datatable.php");
 }
 else {
   ?>
