@@ -3,7 +3,6 @@ session_start();
 if(empty($_SESSION)){
 	header("Location: ../../sign_in.php");
 }
-
 ?>
 <?php
 include('../../connect.php');
@@ -20,7 +19,7 @@ $query = mysqli_query($connect, $sql);
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Rekap Perjalanan Dinas | PERJADIN LAPAN PAREPARE </title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.png"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -109,7 +108,7 @@ $query = mysqli_query($connect, $sql);
             </div>
             <!--Untuk save as PDF -->
             <br>
-            <div id="savepdf" class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="float: right;">
+            <div id="cmd" class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="float: right;">
               <a href="javascript:void(0);">
                   <button id="cmd" type="button" class="btn bg-cyan btn-block btn-lg waves-effect">Save as PDF</button>
               </a>
@@ -134,7 +133,7 @@ $query = mysqli_query($connect, $sql);
               };
               $('#cmd').click(function(){
                 doc.fromHTML($
-                ('#content').html(), 15, 15, {
+                ('#content').html(), 15, 15, { // margin = 15
                   'width':170,
                   'elementHandlers':
                   specialElementHandlers

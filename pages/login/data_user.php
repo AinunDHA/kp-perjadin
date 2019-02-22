@@ -91,9 +91,9 @@ $query = mysqli_query($connect, $sql);
                     <div class="btn-group user-helper-dropdown" style="padding-top: -; margin-top: 20px;">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="../tables/normal-tables.php"><i class="material-icons">info</i>Data Perjadin</a></li>
+                            <li><a href="../tables/jquery-datatable.php"><i class="material-icons">info</i>Data Perjadin</a></li>
                             <li><a href="data_user.php"><i class="material-icons">label</i>Data User</a></li>
-                            <li><a href="../../logout.php"onclick="return confirm('Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
+                            <li><a href="../../logout.php" onclick="return confirm('Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                         </ul>
                     </div>
                 </div>

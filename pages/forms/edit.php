@@ -180,7 +180,7 @@ $query = mysqli_query($connect, $sql);
 
             <!--Button Kembali ke Tabel-->
             <div class="col-xs-9 col-sm-9 col-md-9 col-md-9" style="padding-left: 0px;  padding-right: 30px;  padding-bottom: 30px;">
-                <a href="../../pages/tables/normal-tables.php">
+                <a href="../../pages/tables/jquery-datatable.php">
                   <button type="button" class="btn bg-teal btn-block btn-lg waves-effect">LIHAT DATA</button>
                 </a>
             </div>
