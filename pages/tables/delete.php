@@ -11,7 +11,7 @@ if (isset($_GET['id']) ) {
   $query= mysqli_query($connect, $sql);
   //komen berhasil or not
 if ($query) {
-  header('location:jquery-datatable.php?Berhasil delete data');
+  header('location:data_perjadin.php?Berhasil delete data');
 }
 else {
   die("gagal menghapus......");

@@ -20,7 +20,7 @@
         ?>
             <script language="JavaScript">
               alert('input data berhasil');
-              document.location='form-validation.php';
+              document.location='tambah_perjadin.php';
             </script>
 
         <?php
@@ -30,7 +30,7 @@
         ?>
             <script language="JavaScript">
             alert('Input data gagal');
-              document.location='form-validation.php';
+              document.location='tambah_perjadin.php';
             </script>
 
         <?php

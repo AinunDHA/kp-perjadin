@@ -19,7 +19,7 @@ $cek    = mysqli_num_rows($data);
 if ($cek>0) {
   $_SESSION['username'] = $username;
   $_SESSION['status']   = "login";
-  header("location:pages/tables/jquery-datatable.php");
+  header("location:pages/tables/data_perjadin.php");
 }
 else {
   ?>

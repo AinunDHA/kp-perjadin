@@ -1,7 +1,7 @@
 <?php
 session_start();
  ?>
- 
+
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +10,7 @@ session_start();
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Sign In | Portal Rekap PERJADIN LAPAN PAREPARE</title>
     <!-- Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@ session_start();
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="login-page" style="background: #88d2c1;">
+<body class="login-page" style="background: #88d2c1; background-image: url("images/bg-perjadin1.jpg");">
   <div class="header">
     <img src="images/logo-lapan.png" alt="" width="120" height="120" style="border-left-width: -; margin-left: 120px; margin-right: 120px;">
   </div>

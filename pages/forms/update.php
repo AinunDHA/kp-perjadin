@@ -23,7 +23,7 @@
         ?>
             <script language="JavaScript">
               alert('Update data berhasil');
-              document.location='../tables/normal-tables.php';
+              document.location='../tables/data_perjadin.php';
             </script>
 
         <?php

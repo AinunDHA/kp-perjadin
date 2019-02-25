@@ -12,7 +12,7 @@ if(empty($_SESSION)){
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Form Input Data Perjadin Lapan Parepare| Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../../images/favicon.png"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -158,7 +158,7 @@ if(empty($_SESSION)){
 
             <!--Button Kembali ke Tabel-->
             <div class="col-xs-9 col-sm-9 col-md-9 col-md-9" style="padding-left: 0px;  padding-right: 30px;  padding-bottom: 30px;">
-                <a href="../../pages/tables/jquery-datatable.php">
+                <a href="../../pages/tables/data_perjadin.php">
                   <button type="button" class="btn bg-teal btn-block btn-lg waves-effect">LIHAT DATA</button>
                 </a>
             </div>

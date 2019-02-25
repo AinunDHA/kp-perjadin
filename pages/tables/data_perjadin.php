@@ -66,17 +66,7 @@ $query = mysqli_query($connect, $sql);
     <!-- Overlay For Sidebars -->
     <div class="overlay"></div>
     <!-- #END# Overlay For Sidebars -->
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="START TYPING...">
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
-    <!-- #END# Search Bar -->
+
     <!-- Top Bar -->
     <nav class="navbar" style="background-color: #88d2c1;">
       <div class="container-fluid">
@@ -103,7 +93,7 @@ $query = mysqli_query($connect, $sql);
                   <div class="btn-group user-helper-dropdown" style="padding-top: -; margin-top: 20px;">
                       <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                       <ul class="dropdown-menu pull-right">
-                          <li><a href="jquery-datatable.php"><i class="material-icons">info</i>Data Perjadin</a></li>
+                          <li><a href="data_perjadin.php"><i class="material-icons">info</i>Data Perjadin</a></li>
                           <li><a href="../login/data_user.php"><i class="material-icons">label</i>Data User</a></li>
                           <li><a href="../../logout.php" onclick="return confirm('Anda yakin ingin keluar?')"><i class="material-icons">input</i>Sign Out</a></li>
                       </ul>
@@ -221,7 +211,7 @@ $query = mysqli_query($connect, $sql);
                 </div>
                 <!--Button Kembali ke Tabel-->
                 <div class="col-xs-3 col-sm-3 col-md-3 col-md-3" style="padding-bottom: 30px;">
-                    <a href="../../pages/forms/form-validation.php">
+                    <a href="../../pages/forms/tambah_perjadin.php">
                       <button type="button" class="btn bg-cyan btn-block btn-lg waves-effect">TAMBAH DATA</button>
                     </a>
                 </div>
