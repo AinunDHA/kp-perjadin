@@ -75,7 +75,8 @@ $query = mysqli_query($connect, $sql);
         </div>
           <div class="navbar-header">
               <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
-          </div><div class="navbar-header" style="float: right;">
+          </div>
+					<div class="navbar-header" style="float: right;">
             <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
                aria-controls="collapseExample">
                 DATA PERJADIN
