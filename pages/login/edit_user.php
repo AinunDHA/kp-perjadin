@@ -73,7 +73,7 @@ $query = mysqli_query($connect, $sql);
               <img src="../../images/favicon.png" alt="lapan" width="48" height="">
           </div>
             <div class="navbar-header">
-                <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
+                <a class="navbar-brand" href=" ">LAPAN - STASIUN BUMI PENGINDERAAN JAUH PAREPARE</a>
             </div>
 
         </div>
@@ -108,7 +108,7 @@ $query = mysqli_query($connect, $sql);
                             <form id="form_input" method="POST" action="update_user.php" >
                                 <div class="form-group form-float">
                                   <div class="form-line">
-                                        <input type="text" class="form-control" name="id" required value="<?php echo $_GET['id']; ?>"  >
+                                        <input type="text" class="form-control" readonly name="id" required value="<?php echo $_GET['id']; ?>"  >
                                       <label class="form-label">ID</label>
                                   </div>
                               </div>

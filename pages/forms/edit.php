@@ -108,7 +108,7 @@ $query = mysqli_query($connect, $sql);
                             <form id="form_input" method="POST" action="update.php" >
                                 <div class="form-group form-float">
                                   <div class="form-line">
-                                        <input type="text" class="form-control" name="id" required value="<?php echo $_GET['id']; ?>"  >
+                                        <input type="text" class="form-control" readonly name="id" required value="<?php echo $_GET['id']; ?>"  >
                                       <label class="form-label">ID</label>
                                   </div>
                               </div>
@@ -134,7 +134,8 @@ $query = mysqli_query($connect, $sql);
 
                                 <div class="form-group form-float">
                                     <div class="form-line">
-                                        <textarea name="description" cols="30" rows="5" class="form-control no-resize" required value="<?php echo $row['kgtn_perjadin']; ?>" >  </textarea>
+                                        <input type="text" class="form-control" name="description" required value="<?php echo $row['kgtn_perjadin']; ?>">
+                                        
                                         <label class="form-label">Kegiatan Perjadin</label>
                                     </div>
                                 </div>

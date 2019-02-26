@@ -66,7 +66,7 @@ if(empty($_SESSION)){
               <img src="../../images/favicon.png" alt="lapan" width="48" height="">
           </div>
             <div class="navbar-header">
-                <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
+                <a class="navbar-brand" href=" ">LAPAN - STASIUN BUMI PENGINDERAAN JAUH PAREPARE</a>
             </div>
 
         </div>

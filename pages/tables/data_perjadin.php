@@ -74,20 +74,10 @@ $query = mysqli_query($connect, $sql);
             <img src="../../images/favicon.png" alt="lapan" width="48" height="">
         </div>
           <div class="navbar-header">
-              <a class="navbar-brand" href=" ">LAPAN PAREPARE - Stasiun Bumi Penginderaan Jauh</a>
+              <a class="navbar-brand" href=" ">LAPAN - STASIUN BUMI PENGINDERAAN JAUH PAREPARE</a>
           </div>
-					<div class="navbar-header" style="float: right;">
-            <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
-               aria-controls="collapseExample">
-                DATA PERJADIN
-            </a>
-          </div>
-          <div class="navbar-header" style="float: right;">
-            <a class="btn bg-cyan waves-effect m-b-15" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false"
-               aria-controls="collapseExample">
-                DATA USER
-            </a>
-          </div>
+
+
           <!-- Logout dropdown -->
           <div class="user-info">
               <div class="info-container">
