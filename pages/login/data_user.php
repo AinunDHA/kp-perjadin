@@ -74,7 +74,7 @@ $query = mysqli_query($connect, $sql);
                 <a class="navbar-brand" href=" ">LAPAN - STASIUN BUMI PENGINDERAAN JAUH PAREPARE</a>
             </div>
 
-          
+
             <!-- Logout dropdown -->
             <div class="user-info">
                 <div class="info-container">
