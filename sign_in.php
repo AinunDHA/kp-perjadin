@@ -29,7 +29,7 @@ session_start();
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="login-page" background="images/bg-perjadin1.png" style="background-size: 100%;">
+<body class="login-page" background="images/bg-perjadin9.png" style="background-size: 100%;">
   <div class="header">
     <img src="images/logo-lapan.png" alt="" width="120" height="120" style="border-left-width: -; margin-left: 120px; margin-right: 120px;">
   </div>
